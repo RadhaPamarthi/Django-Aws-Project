@@ -97,12 +97,7 @@ Refer to the [outcomes](./outcomes/) folder to view all images and videos valida
 
 ## Overcoming Challenges
 
-1. **EC2 Instance Health Check Failure:**
-
-   - **Issue**: Encountered health check failed errors despite no apparent issues with the instances.
-   - **Resolution**: Identified errors in the `userdata.sh` script execution, manually installed missing libraries, updated the script, and ensured successful server operation.
-
-2. **DynamoDB Data Sync Issue with Lambda:**
+1. **DynamoDB Data Sync Issue with Lambda:**
    - **Issue**: Noticed a lack of corresponding object information in DynamoDB despite functioning S3 object creation.
    - **Resolution**: Investigated DynamoDB and Lambda functions, discovered successful Lambda triggers but identified the need to create a dedicated security group for Lambda and grant necessary permissions on the DynamoDB security group due to running Lambda in a private VPC. Implemented adjustments to resolve the issue.
 
